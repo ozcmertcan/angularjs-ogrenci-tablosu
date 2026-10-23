@@ -1,2 +1,12 @@
-# angularjs-ogrenci-tablosu
-Kendi öğrendiğim tecrübelerimle yazdığım örnek bir AngularJS öğrenci tablosu (ekleme silme işlemleri barındırıyor ne-click , ng-repeat komutları select-options ile veri kaydetme)
+# AngularJS Öğrenci Tablosu
+
+AngularJS ile yaptığım, öğrenci ekleme ve silme işlemleri olan bir tablo.
+
+## Kullandığım konular
+- ng-repeat ile tabloyu doldurma
+- ng-click ile ekleme ve silme
+- ng-model ve select ile veri girişi
+- ortalama hesaplama ve cinsiyeti ? : ile yazdırma
+
+## Not !
+Veriler kaydedilmiyor, sayfa yenilenince başa dönüyor.
