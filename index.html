@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+   <script src="./angular.min.js"></script>
+   <script src="./Kodlar.js"></script>
+    <style>
+     table{
+       border:3px solid rgb(140,0,0);
+     }
+    tr,td,th{
+      font-size:20px; border:3px solid;
+    }
+      
+    </style>
+  </head>
+  <body ng-app="benimapp" ng-controller="kontrol">
+   <table>
+     <tr>
+       <th>SIRASI</th>
+       <th>AD</th>
+       <th>VİZE</th>
+       <th>FİNAL</th>
+       <th>ORTALAMA</th>
+       <th>CİNSİYET</th>
+       <th>SİL</th>
+     </tr>
+     <tr ng-repeat="x in ogrenciler">
+       <td>{{$index+1}}</td>
+      <td>{{x.ad}}</td>
+       <td>{{x.vize}}</td>
+       <td>{{x.final}}</td>
+       <td>{{x.vize*0.4 + x.final*0.6}}</td>
+       <td>{{x.cinsiyet == 'e' ? 'Erkek' : 'Kız'}}</td>
+       <td><button ng-click="silme($index)">SİL</button></td>
+
+       
+     </tr>
+   </table>
+  <input type="text" ng-model="yeniad" placeholder="Ad girin">
+    <input type="number" ng-model="yenivize" placeholder="Vize girin">
+    <input type="number" ng-model="yenifinal" placeholder="Final girin">
+     <select ng-model="yenicinsiyet">
+      <option>e</option>
+     <option>k</option></select>
+    <button ng-click="yeniogrenciler(yeniad,yenivize,yenifinal,yenicinsiyet)">EKLE</button>
+  </body>
+</html>
